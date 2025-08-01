@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sculptrix | Digital Marketing Agency</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- WebGL Canvas for 3D Background -->
+    <canvas id="canvas3d"></canvas>
+
+    <!-- Floating Shapes -->
+    <div
+      class="floating-shape"
+      style="
+        width: 200px;
+        height: 200px;
+        top: 20%;
+        left: 10%;
+        animation-delay: 0s;
+      "
+    ></div>
+    <div
+      class="floating-shape"
+      style="
+        width: 150px;
+        height: 150px;
+        top: 60%;
+        left: 80%;
+        animation-delay: 2s;
+      "
+    ></div>
+    <div
+      class="floating-shape"
+      style="
+        width: 250px;
+        height: 250px;
+        top: 70%;
+        left: 15%;
+        animation-delay: 4s;
+      "
+    ></div>
+    <div
+      class="floating-shape"
+      style="
+        width: 100px;
+        height: 100px;
+        top: 30%;
+        left: 70%;
+        animation-delay: 6s;
+      "
+    ></div>
+
+    <!-- Header -->
+    <header id="header">
+      <div class="container">
+        <nav>
+          <a href="#" class="logo"><i class="fas fa-cube"></i>Sculptrix</a>
+          <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+          </button>
+          <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+
+            <div class="spline1">
+            <spline-viewer url="https://prod.spline.design/BE8RqQgbjrJIeCqs/scene.splinecode"></spline-viewer>
+          </div>
+
+          <div class="hero-text">
+            <h1>
+              Transform Your <span>Digital Presence</span> With Our Expert
+              Services
+            </h1>
+            <p>
+              We help businesses grow through strategic digital marketing,
+              stunning designs, and high-performing websites. Our data-driven
+              approach ensures maximum ROI for your marketing spend.
+            </p>
+            <div class="hero-buttons">
+              <a href="#pricing" class="btn">View Packages</a>
+              <a href="#contact" class="btn btn-outline">Get Started</a>
+            </div>
+          </div>
+          <div class="spline">
+            <spline-viewer url="https://prod.spline.design/BE8RqQgbjrJIeCqs/scene.splinecode"></spline-viewer>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Services Section -->
+    <section class="section service" id="services">
+      <div class="container">
+        <div class="section-title">
+          <h2>Our Comprehensive Services</h2>
+          <p>
+            We offer end-to-end digital marketing solutions tailored to your
+            business needs. From strategy to execution, we've got you covered.
+          </p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-hashtag"></i>
+            </div>
+            <h3>Social Media Management</h3>
+            <p>
+              Complete handling of your social media profiles including content
+              creation, posting schedule, community engagement, and performance
+              analytics.
+            </p>
+            <a href="#contact" class="btn">Learn More</a>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-ad"></i>
+            </div>
+            <h3>Paid Advertising</h3>
+            <p>
+              Strategic management of Meta and Google ads campaigns to maximize
+              reach and conversions while minimizing ad spend wastage.
+            </p>
+            <a href="#contact" class="btn">Learn More</a>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-paint-brush"></i>
+            </div>
+            <h3>Content Creation</h3>
+            <p>
+              High-quality graphics, logos, UI/UX designs, thumbnails, and
+              marketing materials that capture attention and communicate your
+              brand story.
+            </p>
+            <a href="#contact" class="btn">Learn More</a>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-search"></i>
+            </div>
+            <h3>SEO Services</h3>
+            <p>
+              Comprehensive search engine optimization for your website and
+              social media content to improve visibility and organic traffic.
+            </p>
+            <a href="#contact" class="btn">Learn More</a>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-code"></i>
+            </div>
+            <h3>Web Development</h3>
+            <p>
+              Custom-coded or WordPress websites designed for performance, user
+              experience, and conversion optimization.
+            </p>
+            <a href="#contact" class="btn">Learn More</a>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3>Analytics & Reporting</h3>
+            <p>
+              Detailed performance reports with actionable insights to help you
+              understand your ROI and optimize your marketing strategy.
+            </p>
+            <a href="#contact" class="btn">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section pricing" id="pricing">
+      <div class="container">
+        <div class="section-title">
+          <h2>Flexible Pricing Packages</h2>
+          <p>
+            Choose the package that fits your business needs. All packages can
+            be customized for your specific requirements.
+          </p>
+        </div>
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <h3>Starter</h3>
+            <div class="price">₹4999<span>/month</span></div>
+            <ul class="pricing-features">
+              <li>Social Media Management (2 platforms)</li>
+              <li>8 Posts per month</li>
+              <li>Basic Content Creation</li>
+              <li>Monthly Analytics Report</li>
+              <li class="disabled">Paid Ads Management</li>
+              <li class="disabled">SEO Services</li>
+              <li class="disabled">Website Development</li>
+            </ul>
+            <a href="#contact" class="btn">Get Started</a>
+          </div>
+          <div class="pricing-card popular">
+            <div class="popular-tag">Most Popular</div>
+            <h3>Growth</h3>
+            <div class="price">₹9999<span>/month</span></div>
+            <ul class="pricing-features">
+              <li>Social Media Management (3 platforms)</li>
+              <li>16 Posts per month</li>
+              <li>Premium Content Creation</li>
+              <li>Bi-weekly Analytics Report</li>
+              <li>Paid Ads Management ($500 ad spend)</li>
+              <li>Basic SEO Services</li>
+              <li class="disabled">Website Development</li>
+            </ul>
+            <a href="#contact" class="btn">Get Started</a>
+          </div>
+          <div class="pricing-card">
+            <h3>Enterprise</h3>
+            <div class="price">₹14,999<span>/month</span></div>
+            <ul class="pricing-features">
+              <li>Social Media Management (5 platforms)</li>
+              <li>30+ Posts per month</li>
+              <li>Premium Content Creation</li>
+              <li>Weekly Analytics Report</li>
+              <li>Paid Ads Management</li>
+              <li>Comprehensive SEO Services</li>
+              <li>Website Development</li>
+            </ul>
+            <a href="#contact" class="btn">Get Started</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials" id="testimonials">
+      <div class="container">
+        <div class="section-title">
+          <h2>What Our Clients Say</h2>
+          <p>
+            Don't just take our word for it. Here's what our clients have to say
+            about working with Sculptrix.
+          </p>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              Sculptrix transformed our social media presence completely. Our
+              engagement rates tripled within the first two months, and we're
+              seeing consistent growth in our follower base. Their content
+              strategy is on point!
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <img
+                  src="https://randomuser.me/api/portraits/women/32.jpg"
+                  alt="Sarah Johnson"
+                />
+              </div>
+              <div class="author-info">
+                <h4>Sarah Johnson</h4>
+                <p>CEO, Bloom Cosmetics</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              The website Sculptrix built for us exceeded all expectations. Not
+              only is it beautiful, but it's also incredibly functional. Our
+              conversion rates improved by 40% after the redesign. Highly
+              recommend their web services!
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <img
+                  src="https://randomuser.me/api/portraits/men/45.jpg"
+                  alt="Michael Chen"
+                />
+              </div>
+              <div class="author-info">
+                <h4>Michael Chen</h4>
+                <p>Founder, TechGadgets</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              Their paid ads management has been a game-changer for our
+              e-commerce business. They've optimized our ad spend so effectively
+              that we're getting double the conversions at the same budget.
+              Truly data-driven experts!
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <img
+                  src="https://randomuser.me/api/portraits/women/68.jpg"
+                  alt="Emily Rodriguez"
+                />
+              </div>
+              <div class="author-info">
+                <h4>Emily Rodriguez</h4>
+                <p>Marketing Director, StyleHub</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="section-title">
+          <h2>Ready to Grow Your Business?</h2>
+          <p>
+            Get in touch with us today to discuss how we can help you achieve
+            your digital marketing goals.
+          </p>
+        </div>
+        <div class="contact-container">
+          <div class="contact-info">
+            <h3>Let's Talk About Your Project</h3>
+            <p>
+              We're excited to learn about your business and discuss how our
+              services can help you reach your goals. Fill out the form or
+              contact us directly using the information below.
+            </p>
+            <ul class="contact-details">
+              <li>
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Prayagraj, Uttar Pradesh</span>
+              </li>
+              <li>
+                <i class="fas fa-phone-alt"></i>
+                <span>+91-9335809406</span>
+              </li>
+              <li>
+                <i class="fas fa-envelope"></i>
+                <span>sculptrix9@gmail.com</span>
+              </li>
+            </ul>
+          </div>
+          <div class="contact-form">
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" class="form-control" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" class="form-control" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label for="service">Interested In</label>
+                <select id="service" class="form-control">
+                  <option value="">Select a service</option>
+                  <option value="social-media">Social Media Management</option>
+                  <option value="paid-ads">Paid Advertising</option>
+                  <option value="content">Content Creation</option>
+                  <option value="seo">SEO Services</option>
+                  <option value="web-dev">Web Development</option>
+                  <option value="full-package">Full Package</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea id="message" class="form-control"></textarea>
+              </div>
+              <button type="submit" class="btn">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-container">
+          <div class="footer-col">
+            <h4>About Sculptrix</h4>
+            <p>
+              We're a full-service digital marketing agency dedicated to helping
+              businesses grow through strategic online marketing, stunning
+              designs, and high-performing websites.
+            </p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Our Services</h4>
+            <ul class="footer-links">
+              <li><a href="#">Social Media Management</a></li>
+              <li><a href="#">Paid Advertising</a></li>
+              <li><a href="#">Content Creation</a></li>
+              <li><a href="#">SEO Services</a></li>
+              <li><a href="#">Web Development</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#pricing">Pricing</a></li>
+              <li><a href="#testimonials">Testimonials</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Newsletter</h4>
+            <p>
+              Subscribe to our newsletter for digital marketing tips and special
+              offers.
+            </p>
+            <form class="newsletter-form">
+              <div class="form-group">
+                <input
+                  type="email"
+                  placeholder="Your Email"
+                  class="form-control"
+                />
+              </div>
+              <button type="submit" class="btn">Subscribe</button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; 2023 Sculptrix Digital Marketing Agency. All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.0/dist/vanilla-tilt.min.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/@splinetool/viewer@1.10.38/build/spline-viewer.js"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
