@@ -63,11 +63,24 @@ nav {
 .logo {
   font-size: 28px;
   font-weight: 700;
-  color: var(--primary);
+  color: #017AFD;
   text-decoration: none;
   display: flex;
   align-items: center;
   z-index: 100;
+  /* justify-content : space-evenly; */
+  padding: 0;
+  /* width: 25%; */
+  /* border: 2px solid green; */
+  padding: 0;
+  margin: -1px;
+  img{
+    padding: 10px;
+    margin: 0;
+    /* border: 1px solid red; */
+    width: 20%;
+    /* height: 20%; */
+  }
 }
 
 .logo i {
