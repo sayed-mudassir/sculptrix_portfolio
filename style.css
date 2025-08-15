@@ -235,10 +235,115 @@ nav {
   box-shadow: 0 20px 40px rgba(108, 99, 255, 0.2);
   transition: transform 0.5s ease;
 }
-
-.hero-image:hover img {
+.hero-image img:hover {
   transform: translateY(-10px) rotate(2deg);
 }
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 3rem 1.5rem;
+  flex-wrap: wrap; /* mobile-friendly */
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("/assets/tri-ribbon-bg.png"); /* optional tricolor ribbon bg */
+  background-size: cover;
+  background-position: center;
+  border-radius: 1rem;
+}
+
+/* Text section */
+.hero-text {
+  flex: 1 1 450px;
+  color: #fff;
+}
+
+.hero-text h1 {
+  font-size: clamp(1.8rem, 2.8vw, 3rem);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero-text h1 span {
+  background: linear-gradient(90deg, #ff9933, #ffffff, #138808);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-text p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.95;
+  max-width: 600px;
+  color: #fff;
+}
+
+/* Buttons */
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.75rem 1.25rem;
+  background: #0a5bd3; /* Ashoka Chakra blue */
+  color: #fff;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: #0849a5;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid #fff;
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Image section */
+.heroImg {
+  flex: 1 1 350px;
+  display: flex;
+  justify-content: center;
+}
+
+.heroImg img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  object-fit: cover;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .hero-content {
+    padding-top: 30rem;
+    text-align: center;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .heroImg {
+    order: -1; /* Image appears on top for mobile */
+  }
+}
+
 
 .btn {
   display: inline-block;
